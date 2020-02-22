@@ -30,7 +30,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
-.map stores and returns values while .forEach throws away the return values. .forEach allows a callback function to mutate an array while .map instead returns a new array.
+`.map` stores and returns values while `.forEach` throws away the return values. `.forEach` allows a callback function to mutate an array while `.map` instead returns a new array.
 
 2. What is the difference between a function and a method?
 
@@ -38,14 +38,14 @@ A function stands alone, and a method exists as a function within an object. Cal
 
 3. What is closure?
 
-Variables defined broadly - outside of a function - are accessible within functions. Also, variables defined inside a function are accessible to that function, but not outside that function. A closure allows you to access the scope of an outer function from an inner one.
+Variables defined broadly - outside of a function - are accessible within functions. Also, variables defined inside a function are accessible to that function, but not outside that function. Closure allows you to access the scope of an outer function from an inner one but not the other way around.
 
 4. Describe the four rules of the 'this' keyword.
 
-1. Window/global object binding - if "this" is used globally, it essentially references Javascript as one object. In order to be max effective, "this" should be used inside a created object.
-2. Implicit binding - the keyword "this" refers to the object before the dot. So for an object called "Obj" and a method called "method", using "this" inside "method" will refer to "Obj". This is the most common way to use "this".
-3. New binding - when using a constructor function, "this" will refer to the object that is created. So setting a new constant "const" equal to new Const() will then let us use "this" to refer to the new object "Const" that we created.
-4. Explicit binding - when using call or apply methods we are explicitly defining "this". Doing so uses an object-oriented approach to override how we set constructor objects.
+1) Window/global object binding - if "this" is used globally, it essentially references Javascript as one object. In order to be max effective, "this" should be used inside a created object.
+2) Implicit binding - the keyword "this" refers to the object before the dot. So for an object called "Obj" and a method called "method", using "this" inside "method" will refer to "Obj". This is the most common way to use "this".
+3) New binding - when using a constructor function, "this" will refer to the object that is created. So setting a new constant "const" equal to new Const() will then let us use "this" to refer to the new object "Const" that we created.
+4) Explicit binding - when using call or apply methods we are explicitly defining "this". Doing so uses an object-oriented approach to override how we set constructor objects.
 
 5. Why do we need super() in an extended class?
 
