@@ -156,9 +156,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-function animalNames(array) {
-  displayNames.push(`Name: ${array.animal_name}, Scientific: ${array.scientific_name}`)
-}
+const animalNames = (array) => displayNames.push(`Name: ${array.animal_name}, Scientific: ${array.scientific_name}`);
 zooAnimals.forEach(animalNames);
 console.log(displayNames);
 
@@ -176,9 +174,7 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter((item, index) => {
-  return zooAnimals[index].population < 5
-});
+const lowPopulationAnimals = zooAnimals.filter((item, index) => zooAnimals[index].population < 5);
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce()
@@ -187,9 +183,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationArray = [];
-zooAnimals.forEach((object, index, arr) => {
-  populationArray.push(object.population)
-});
+zooAnimals.forEach((object, index, arr) => populationArray.push(object.population));
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 const populationTotal = populationArray.reduce(reducer, 0);
 console.log(populationTotal);
