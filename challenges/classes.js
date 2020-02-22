@@ -21,12 +21,14 @@ const cuboid = new CuboidMaker(4, 5, 5);
 class CubeMaker extends CuboidMaker {
   constructor(length, width, height) {
     super(length, width, height);
+    this.length = length;
+    this.width = length;
+    this.height = length;
   }
   volume() {return this.length * this.length * this.length}
   surfaceArea() {return 6 * this.length * this.length}
 }
-const cube = new CubeMaker(10, 10, 10);
-console.log(cube);
+const cube = new CubeMaker(10);
 
 //tests for CubeMaker
 console.log(cube.volume()); // 1000
