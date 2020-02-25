@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.map` stores and returns values while `.forEach` throws away the return values. `.forEach` allows a callback function to mutate an array while `.map` instead returns a new array.
+
 2. What is the difference between a function and a method?
+
+A function stands alone, and a method exists as a function within an object. Calling a method requires referencing the parent object, and a function can be called without referencing a parent object.
 
 3. What is closure?
 
+Variables defined broadly - outside of a function - are accessible within functions. Also, variables defined inside a function are accessible to that function, but not outside that function. Closure allows you to access the scope of an outer function from an inner one but not the other way around.
+
 4. Describe the four rules of the 'this' keyword.
 
+1) Window/global object binding - if "this" is used globally, it essentially references Javascript as one object. In order to be max effective, "this" should be used inside a created object.
+2) Implicit binding - the keyword "this" refers to the object before the dot. So for an object called "Obj" and a method called "method", using "this" inside "method" will refer to "Obj". This is the most common way to use "this".
+3) New binding - when using a constructor function, "this" will refer to the object that is created. So setting a new constant "const" equal to new Const() will then let us use "this" to refer to the new object "Const" that we created.
+4) Explicit binding - when using call or apply methods we are explicitly defining "this". Doing so uses an object-oriented approach to override how we set constructor objects.
+
 5. Why do we need super() in an extended class?
+
+Using super() in an extended class allows all the properties of the parent class to be applied to the child class. It allows us to bring any number of properties from the parent to the child with just one line of code.
 
 ## Project Set up
 
@@ -65,11 +78,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
